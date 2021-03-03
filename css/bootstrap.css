@@ -1395,6 +1395,7 @@ a.bg-info:focus {
 }
 .bg-warning {
   background-color: #fcf8e3;
+  /*background-color: #000000;*/
 }
 a.bg-warning:hover,
 a.bg-warning:focus {
@@ -1406,6 +1407,7 @@ a.bg-warning:focus {
 a.bg-danger:hover,
 a.bg-danger:focus {
   background-color: #e4b9b9;
+  background-color: #000000;
 }
 .page-header {
   padding-bottom: 9px;

@@ -61,7 +61,17 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1>Artificial Intelligence</h1>
-                    <p>In this study, you were given predictions by an artificial intelligence (AI) <i>classifier</i>. The classifier is 'trained' using a process known as machine learning (ML). A very simple example of a classifier would be </p>
+                    <p>In this study, you were given predictions by an artificial intelligence (AI) <i>classifier</i>. The classifier is 'trained' using a process known as machine learning (ML). A simple example of a classifier would be one that separates red and blue dots. First an initial guess is supplied, that suggests anything less than 0 is red, anything greater is blue:</p>
+                    <p><img style="height:300px" src="out/1d_classifier_0.0.png"/></p>
+                    <p>The dots are known as <i>training data</i>. We can see that there are two dots to the right of the dashed line that have been <i>misclassified</i>: the classifier predicts that another dot in the same place would be blue (as they are to the right of the dashed line), but we can see clearly that they are red. We train the classifier by letting it see all the data, and calculating how far wrong it is. We then make small adjustments to continually reduce the degree of error, until we end up with a solution:</p>
+                    <p><img style="height:300px" src="out/1d_classifier_2.5.png"/></p>
+                    <p>In these examples, the dots only vary along the horizontal dimension. This is known as a <i>feature</i>. We can perform a similar process using dots that vary along both the horizontal and vertical axes, i.e. with two features.</p>
+                    <p><img src="out/2d_classifier_v0.png" style="height: 300px"/></p>
+                    <p>This is a harder problem, so we make a smaller adjustment:</p>
+                    <p><img src="out/2d_classifier_v2.png" style="height: 300px"/></p>
+                    <p>This is closer, but we can see there are still a few red points that are misclassified. But we can just feed in all of the training data again:</p>
+                    <p><img src="out/2d_classifier_v1.png" style="height: 300px"/></p>
+                    <p></p>
                 </div>
             </div>
         </div>

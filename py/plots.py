@@ -39,8 +39,9 @@ def make_2d_classifier_plot():
     plt.scatter(red_x, red_y, c='r')
     plt.scatter(blue_x, blue_y, c='b')
     # plt.plot([1.5, 4.5], [1.5, 4.5], 'k--')
-    plt.plot([1.5, 6.5], [1.5/2 + 0.5, 6.5/2 + 0.5], 'k--')
-    plt.savefig(f'../out/2d_classifier_v1.png')
+    plt.plot([1.5, 6.5], [1.5/1.5 + 0.25, 6.5/1.5 + 0.25], 'k--')
+    # plt.plot([1.5, 6.5], [1.5/2 + 0.5, 6.5/2 + 0.5], 'k--')
+    plt.savefig(f'../out/2d_classifier_v2.png')
 
 
 if __name__ == '__main__':
