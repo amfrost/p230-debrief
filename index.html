@@ -68,7 +68,7 @@
             <li>Explaining classifier decisions (a different 50% may have seen the 'focused areas' of each example highlighted in green)</li>
             <li>Overview of this study (why have you just volunteered to name 28 breeds of dog..?)</li>
           </ul>
-          <p>I've tried to make everything as accessible as possible, hopefully starting from the ground up and leaving aside any of the mathematics. </p>
+          <p>I've tried to make everything as accessible as possible, hopefully starting from the ground up and leaving aside any of the mathematics, and there are maybe even some interesting concepts mentioned even if you already have a passing interesting in machine learning/AI.</p>
         </div>
       </div>
     </div>
@@ -158,8 +158,20 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2>Study Overview</h2>
-          <p class="lead">Hopefully there's been enough here to understand the broad principles of the main topics of this research project.</p>
-          <p>This is possible because, while neural networks are the backbone of the vast majority of modern-day machine learning, they do have a notable flaw: they can be tricked.</p>
+          <p class="lead">Hopefully there's been enough here to understand the broad principles of the main topics of this research project, which I will now try and summarise.</p>
+          <p>The future of A.I. systems is probably not that robots are going to take our jobs -- more likely, they will provide assistance to help us perform tasks better, (such as the clinician spotting tumours in X-rays with the help of a classifier, that I mentioned in the study).</p>
+          <p>However, in order for this to be beneficial, users have to <i>trust</i> the systems they're using. But, as we have seen, it is difficult to have faith in things like neural networks, when we know they can be easily fooled.</p>
+          <p>A good example would be the following: suppose you have an antivirus scanner on your computer, that points out when it detects something that looks like a virus, (many people already have something similar). Every time it does this, it asks you what you want to do with it, i.e. remove it, or leave it alone.</p>
+          <p>Neural networks can classify viruses just as easily as photographs of dogs, but they can also be fooled in just the same way. If a user sees that their scanner keeps getting fooled, and making obvious mistakes, <i>eventually they will just learn to ignore it</i>. At this point, an attacker might then have a way to inject a virus into a user's machine, not by bypassing the antivirus scanner, but by breaking the trust the user had.</p>
+          <p>The aim of this study has been to explore this effect, and in particular, whether trust is more or less affected by adversarial examples, when there is an explanation provided for the network decision. To this end, all participants were randomly assigned to 4 different groups:</p>
+          <ul>
+            <li>The control group, who saw no adversarial examples, and no explanations.</li>
+            <li>A group who were shown two adversairal examples, (e.g. a German Shepherd misclassified as a Miniature Poodle), with no explanations.</li>
+            <li>A group who saw no adversarial examples, but were provided explanations with the highlighted green regions above.</li>
+            <li>A group who saw both the adversarial examples, and the explanations.</li>
+          </ul>
+          <p>To date, there has been little quantitative analysis of how user's trust <i>changes</i> as they spend time interacting with a machine learning system, (many studies simply ask people their opinions at the end, i.e. qualitative analysis). By assessing how frequently you change your decision after having been shown the classifier predictions, this can be used as a kind of indicator of trust.</p>
+          <p>Lastly, there has been almost no previous work carried out on assessing trust in the presence of adversarial examples (if you know of any please get in touch!). So this study is in some ways the first of its kind, and hopefully we can learn things that might provide future designers of neural networks with insight as to how to protect against adversarial attacks, and specifically how to maintain user's trust.</p>
         </div>
       </div>
     </div>
