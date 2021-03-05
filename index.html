@@ -1,117 +1,150 @@
-<!doctype html>
-<html lang="en" class="no-js">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="canonical" href="https://html5-templates.com/" />
-    <title>Bootstrap Template With Sticky Menu</title>
-    <meta name="description" content="Simplified Bootstrap template with sticky menu">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/sticky-menu.css" rel="stylesheet">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Scrolling Nav - Start Bootstrap Template</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/scrolling-nav.css" rel="stylesheet">
+
 </head>
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle menu</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Study Debrief</a>
-            </div>
 
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="hidden">
-                        <a class="page-scroll" href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#aibasics">Artifical Intelligence</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#whatwedo">What We Do</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Sources</a>
-                    </li>
-                </ul>
-            </div>	<!-- .navbar-collapse -->
-        </div>		<!-- .container -->
-    </nav>
-    <!-- Welcome   -->
-    <section id="Test" class="welcome-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1>Thank you! :)</h1>
-                    <p style="text-align: left">I've made this page just to provide a brief overview of the aims of this study, to make sure it is transparent to everyone who kindly volunteered to participate. Use the tabs at the top to navigate between sections. Hopefully there is enough here to give you an idea, but as before if you have any questions, comments, feedback etc., please get in touch with me using amf85 at cam.ac.uk (replace at with @)</p>
-					<p>&nbsp;</p>
-                    <a class="btn btn-primary page-scroll" href="#about">Next page</a>
-                </div>
-            </div>
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Participant Debrief</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#whatisallthis">What is all this?</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#artificialintelligence">Artificial Intelligence</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#adversarialexamples">Adversarial Examples</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#explainability">Explainability</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">Study overview</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="bg-primary text-white">
+    <div class="container text-center">
+      <h1>Thank you! :)</h1>
+    </div>
+  </header>
+
+  <section id="whatisallthis" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>What is all this?</h2>
+          <p style="text-align: left">I've made this page just to provide a brief overview of the aims of this study, to make sure it is transparent to everyone who kindly volunteered to participate. Use the tabs at the top to navigate between sections. Hopefully there is enough here to give you an idea, but as before if you have any questions, comments, etc., please get in touch with me using amf85 at cam.ac.uk </p>
+          <ul>
+            <li>How does artificial intelligence really work</li>
+            <li>Adversarial examples (roughly 50% of participants perhaps noticed some dubious classifier suggestions in the trial?)</li>
+            <li>Explaining classifier decisions (a different 50% may have seen the 'focused areas' of each example highlighted in green)</li>
+            <li>Overview of this study (why have you just volunteered to name 28 breeds of dog..?)</li>
+          </ul>
+
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- About -->
-    <section id="aibasics" class="about-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1>Artificial Intelligence</h1>
-                    <p>In this study, you were given predictions by an artificial intelligence (AI) <i>classifier</i>. The classifier is 'trained' using a process known as machine learning (ML). A simple example of a classifier would be one that separates red and blue dots. First an initial guess is supplied, that suggests anything less than 0 is red, anything greater is blue:</p>
-                    <p><img style="height:300px" src="out/1d_classifier_0.0.png"/></p>
-                    <p>The dots are known as <i>training data</i>. We can see that there are two dots to the right of the dashed line that have been <i>misclassified</i>: the classifier predicts that another dot in the same place would be blue (as they are to the right of the dashed line), but we can see clearly that they are red. We train the classifier by letting it see all the data, and calculating how far wrong it is. We then make small adjustments to continually reduce the degree of error, until we end up with a solution:</p>
-                    <p><img style="height:300px" src="out/1d_classifier_2.5.png"/></p>
-                    <p>In these examples, the dots only vary along the horizontal dimension. This is known as a <i>feature</i>. We can perform a similar process using dots that vary along both the horizontal and vertical axes, i.e. with two features.</p>
-                    <p><img src="out/2d_classifier_v0.png" style="height: 300px"/></p>
-                    <p>This is a harder problem, so we make a smaller adjustment:</p>
-                    <p><img src="out/2d_classifier_v2.png" style="height: 300px"/></p>
-                    <p>This is closer, but we can see there are still a few red points that are misclassified. But we can just feed in all of the training data again:</p>
-                    <p><img src="out/2d_classifier_v1.png" style="height: 300px"/></p>
-                    <p></p>
-                </div>
-            </div>
+  <section id="artificialintelligence">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Artificial "Intelligence"</h2>
+          <p>In this study, you were given predictions by an artificial intelligence (AI) <i>classifier</i>. The classifier is 'trained' using a process known as machine learning (ML). A simple example of a classifier would be one that separates red and blue dots arranged on a line, (the dots are known as our <i>training data</i>). We would like to place a dashed line, that indicates anything to the left of the line is red, and anything to the right is blue. First an initial guess is supplied, with the dashed line at 0:</p>
+                    <p><img style="height:300px; margin-left: auto; display: block; margin-right: auto" src="out/1d_classifier_0.0.png"/></p>
+                    <p>We can see that there are two dots to the right of the dashed line that have been <i>misclassified</i>: the classifier predicts that another dot in the same place would be blue (as they are to the right of the dashed line), but we can see clearly that they are red. We train the classifier by letting it see all the data, and calculating how far wrong it is. We then make small adjustments to continually reduce the degree of error, until we end up with a solution:</p>
+                    <p><img style="height:300px; margin-left: auto; display: block; margin-right: auto; margin-left: auto; display: block; margin-right: auto" src="out/1d_classifier_2.5.png"/></p>
+                    <p>In these examples, the dots only vary along the horizontal dimension. This is known as a <i>feature</i>. We can perform a similar process using dots that vary along both the horizontal and vertical axes, i.e. with two dimensions/features.</p>
+                    <p><img src="out/2d_classifier_v0.png" style="height: 300px; margin-left: auto; display: block; margin-right: auto"/></p>
+                    <p>This problem is harder, but the methods we use to solve it are fundamentally the same as the one-dimensional version. Because it is trickier, we try out a smaller adjustment:</p>
+                    <p><img src="out/2d_classifier_v2.png" style="height: 300px; margin-left: auto; display: block; margin-right: auto"/></p>
+                    <p>This is closer, though we can see there are still a few red points that are misclassified. But we can just feed in all of the training data again:</p>
+                    <p><img src="out/2d_classifier_v1.png" style="height: 300px; margin-left: auto; display: block; margin-right: auto"/></p>
+                    <p>And we've arrived at our solution. Importantly, we have a dashed line that tells us whether any <i>new</i> dot (that we don't know the colour for) is likely to be blue or red -- this is known as prediction.</p>
+                    <p>In the same way we scaled up from one dimension to two, we can continue using as many dimensions as we like -- mathematically, it makes no difference, (though past three dimensions there is of course no convenient way to visualise this).</p>
+                    <h5>How does this help with pictures of dogs?</h5>
+                    <p>With the two dimensional blue and red dots, each dot could be described as a combination of three things: its value along the horizontal feature (from ~1.5 -- 6.5); its value along the vertical feature (from around 1.5 -- 4.5); and its colour.</p>
+                    <p>Consider a black and white image: this can also be described as a collection of features, where each pixel is a single feature. There are a lot more of them though -- a small-ish 300x200 image will consist of 60,000 pixels, and hence there are 60,000 features, each taking a value from 0 (darkest black) to 255 (brightest white). For a colour image, we just use the three red-blue-green RGB 'channels' instead, so we would have 300x200x3 = 180,000 features. </p>
+                    <p>When we trained our red/blue classifier, we also needed to know whether the dots were red or blue. Similarly, if we want to train a classifier to recognise different breeds of dogs, we assign the name of the breed to each photograph.</p>
+                    <p>The two-dimensional classifier above is known as a <i>neuron</i> -- and work similarly to the neurons in your brain. By combining thousands, or even millions, of these neurons together, we form <i>neural networks</i>, which can attack problems much more complex than the red/blue separation.</p>
+                    <p>Some people might argue that machine learning is a lot more complicated than this, but while the maths might get harder, what I've described above is essentially all there is to it.</p>
+                    <p><img src="https://imgs.xkcd.com/comics/machine_learning.png" style="; margin-left: auto; display: block; margin-right: auto"/></p><p style="text-align: center">credit: xkcd</p>
+
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- What we do Section -->
-    <section id="whatwedo" class="whatwedo-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1>What We Do</h1>
-                </div>
-            </div>
+  <section id="adversarialexamples" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Adversarial Examples</h2>
+          <p>Neural networks are the backbone of the vast majority of modern-day machine learning, but they do have a notable flaw: they can be tricked. Neural networks can be considered as if they are just incredibly long algebraic equations: if we know exactly how all the input features are processed, we could modify them in a very particular way </p>
+          <p>We now have a rough idea of how we go about training an AI classifier. The process is shown in the graphic below:</p>
+                    <p><img src="out/classifier.png" style="width: 800px; margin-left: auto; display: block; margin-right: auto"/></p>
+          <p>Essentially we feed</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1>Sources and references</h1>
-                    <p>This page was made using a template from <a href="https://html5-templates.com/" target="_blank" rel="nofollow">HTML5 Templates</a>.</p>
-
-                </div>
-            </div>
+  <section id="explainability">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Contact us</h2>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
         </div>
-    </section>
-	
-	<a id="back2Top" title="Back to top" href="#">&#10148;</a>
-	
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+      </div>
+    </div>
+  </section>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
 
-    <!-- Scrolling Nav JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/sticky-menu.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom JavaScript for this theme -->
+  <script src="js/scrolling-nav.js"></script>
 
 </body>
 
