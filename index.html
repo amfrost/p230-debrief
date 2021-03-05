@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Scrolling Nav - Start Bootstrap Template</title>
+  <title>Participant Debrief</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -49,7 +49,7 @@
     </div>
   </nav>
 
-  <header class="bg-primary text-white">
+  <header class="bg-primary text-white" style="background-color: #0b7ea8 !important">
     <div class="container text-center">
       <h1>Thank you! :)</h1>
     </div>
@@ -60,14 +60,15 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2>What is all this?</h2>
-          <p style="text-align: left">I've made this page just to provide a brief overview of the aims of this study, to make sure it is transparent to everyone who kindly volunteered to participate. Use the tabs at the top to navigate between sections. Hopefully there is enough here to give you an idea, but as before if you have any questions, comments, etc., please get in touch with me using amf85 at cam.ac.uk </p>
+          <p style="text-align: left" class="lead">I've made this page just to provide a brief overview of the aims of this study, to make sure it is transparent to everyone who kindly volunteered to participate. If you're curious about the study in any way, this page should hopefully answer any questions.</p>
+          <p>Use the tabs at the top to navigate between sections. Hopefully there is enough here to give you an idea, but as before if you have any questions, comments, etc., please get in touch with me using amf85 at cam.ac.uk </p>
           <ul>
             <li>How does artificial intelligence really work</li>
             <li>Adversarial examples (roughly 50% of participants perhaps noticed some dubious classifier suggestions in the trial?)</li>
             <li>Explaining classifier decisions (a different 50% may have seen the 'focused areas' of each example highlighted in green)</li>
             <li>Overview of this study (why have you just volunteered to name 28 breeds of dog..?)</li>
           </ul>
-
+          <p>I've tried to make everything as accessible as possible, hopefully starting from the ground up and leaving aside any of the mathematics. </p>
         </div>
       </div>
     </div>
@@ -78,7 +79,8 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2>Artificial "Intelligence"</h2>
-          <p>In this study, you were given predictions by an artificial intelligence (AI) <i>classifier</i>. The classifier is 'trained' using a process known as machine learning (ML). A simple example of a classifier would be one that separates red and blue dots arranged on a line, (the dots are known as our <i>training data</i>). We would like to place a dashed line, that indicates anything to the left of the line is red, and anything to the right is blue. First an initial guess is supplied, with the dashed line at 0:</p>
+          <p class="lead">In this study, you were given predictions by an artificial intelligence (AI) <i>classifier</i>. The classifier is 'trained' using a process known as machine learning (ML).</p>
+          <p>A simple example of a classifier would be one that separates red and blue dots arranged on a line, (the dots are known as our <i>training data</i>). We would like to place a dashed line, that indicates anything to the left of the line is red, and anything to the right is blue. First an initial guess is supplied, with the dashed line at 0:</p>
                     <p><img style="height:300px; margin-left: auto; display: block; margin-right: auto" src="out/1d_classifier_0.0.png"/></p>
                     <p>We can see that there are two dots to the right of the dashed line that have been <i>misclassified</i>: the classifier predicts that another dot in the same place would be blue (as they are to the right of the dashed line), but we can see clearly that they are red. We train the classifier by letting it see all the data, and calculating how far wrong it is. We then make small adjustments to continually reduce the degree of error, until we end up with a solution:</p>
                     <p><img style="height:300px; margin-left: auto; display: block; margin-right: auto; margin-left: auto; display: block; margin-right: auto" src="out/1d_classifier_2.5.png"/></p>
@@ -96,7 +98,7 @@
                     <p>When we trained our red/blue classifier, we also needed to know whether the dots were red or blue. Similarly, if we want to train a classifier to recognise different breeds of dogs, we assign the name of the breed to each photograph.</p>
                     <p>The two-dimensional classifier above is known as a <i>neuron</i> -- and work similarly to the neurons in your brain. By combining thousands, or even millions, of these neurons together, we form <i>neural networks</i>, which can attack problems much more complex than the red/blue separation.</p>
                     <p>Some people might argue that machine learning is a lot more complicated than this, but while the maths might get harder, what I've described above is essentially all there is to it.</p>
-                    <p><img src="https://imgs.xkcd.com/comics/machine_learning.png" style="; margin-left: auto; display: block; margin-right: auto"/></p><p style="text-align: center">credit: xkcd</p>
+          <p><img src="https://imgs.xkcd.com/comics/machine_learning.png" style="; margin-left: auto; display: block; margin-right: auto"/></p><p style="text-align: center">credit: <a href="https://xkcd.com/1838/">xkcd</a></p>
 
         </div>
       </div>
@@ -108,10 +110,25 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2>Adversarial Examples</h2>
-          <p>Neural networks are the backbone of the vast majority of modern-day machine learning, but they do have a notable flaw: they can be tricked. Neural networks can be considered as if they are just incredibly long algebraic equations: if we know exactly how all the input features are processed, we could modify them in a very particular way </p>
+          <p class="lead">An adversarial example is an example of input data, e.g. an image of a dog, that appears to a human to be very obviously one 'class' (or breed), but which a neural network thinks is a completely different class.</p>
+          <p>This is possible because, while neural networks are the backbone of the vast majority of modern-day machine learning, they do have a notable flaw: they can be tricked.</p>
           <p>We now have a rough idea of how we go about training an AI classifier. The process is shown in the graphic below:</p>
                     <p><img src="out/classifier.png" style="width: 800px; margin-left: auto; display: block; margin-right: auto"/></p>
-          <p>Essentially we feed</p>
+          <p>Simply put, we continually execute the following steps</p>
+          <ul>
+            <li>Feed the classifier with images of dogs, labelled with the correct breed</li>
+            <li>Check what the output is</li>
+            <li>Work out how far away the classifier output (e.g. 'westie') is from the real breed (e.g. 'yorkie')</li>
+            <li>Move the 'dashed line' very slightly, so the output next time is closer to being correct</li>
+            <li>Repeat hundreds of thousands of times</li>
+          </ul>
+          <h5>How do we construct an 'adversarial' example?</h5>
+
+          <p>Neural networks can be considered as if they are just incredibly long algebraic equations: importantly, their outputs are <i>continuous</i> -- this just means that if we make a small change to the input, we can expect a similarly small change to the output, (and vice-versa, a large change to the input makes for a large change in output). This is what allows us to train them, by making tiny adjustments.</p>
+          <p>If the network is frozen, (we no longer modify the internal dashed line), we can therefore continually make changes to our input, until we get the answer we want!</p>
+          <p><img src="out/adversarial.png" style="width: 800px; margin-left: auto; display: block; margin-right: auto"/></p>
+          <p>Obviously if we just kept modifying our image of a Yorkshire terrier with reckless abandon, pretty soon it would look unrecognisable to the original. The trick, is to <i>constrain</i> our modifications: we say that we can modify the image any way we like, <u>as long as the pixel values are with a small percentage of the original values</u>.</p>
+          <p>By repeatedly running the image through classifier time after time, we eventually end up with an image with the smallest possible change required to trick the network into believing it is something else entirely.</p>
         </div>
       </div>
     </div>
@@ -121,8 +138,28 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <h2>Contact us</h2>
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
+          <h2>Explainability</h2>
+          <p class="lead">Neural networks consist of millions of parameters that interact in increasingly obscure ways, and as you might imagine it makes their behaviour something of a mystery.</p>
+          <p>As a consequence, we can try and develop methods to <i>explain</i> their output. For this project, explanations were generated by repeatedly modifying small parts of the image at random, and seeing how badly it affected the output. For example, if we modify a small part of the image (such as a tree in the background) and find that the classifier still names the correct breed of dog, we can conclude that that small part of the image is not very important.</p>
+          <p>However, if we modify another part of the image, (such as a bit of an ear), we might find that the classifier now gives a completely different answer. We can therefore say that the part of the image containing the ear was more 'important' than the part containing the tree.</p>
+          <p>Like everything else in machine learning, we repeat this process thousands of times, and eventually have a pretty good idea of which parts of the image are the most important. Finally, we select the most important region, and highlight it green, to show you what the network felt was the most important part of the image.</p>
+          <p><img src="out/eg_exp_2.jpg" style="margin-left: auto; display: block; margin-right: auto"/></p>
+          <p>As we can see, we didn't need to know anything about the internals of the neural network in order to generate this explanation. We only modified the input, and observed the output - treating the network as a black box.</p>
+          <p>We can generate more unusual types of explanation by looking at the internals. For example, we can see what type of inputs different parts of the network respond most to, and end up with some images like these:</p>
+          <p><img src="out/filters.png" style="width: 700px; margin-left: auto; display: block; margin-right: auto"/></p>
+          <p>We can think of these as representations of what the network is looking for. For example, in the top row, second from the left, we see an example of what the network <i>might</i> think of as a kind of 'average of all dogs with floppy ears'. If you want to see more examples of these, take a look at the original publication <a href="https://distill.pub/2017/feature-visualization/">here</a>. Word of warning: some of these are incredibly unsettling.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="overview" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Study Overview</h2>
+          <p class="lead">Hopefully there's been enough here to understand the broad principles of the main topics of this research project.</p>
+          <p>This is possible because, while neural networks are the backbone of the vast majority of modern-day machine learning, they do have a notable flaw: they can be tricked.</p>
         </div>
       </div>
     </div>
@@ -131,7 +168,7 @@
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+<!--      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>-->
     </div>
     <!-- /.container -->
   </footer>
